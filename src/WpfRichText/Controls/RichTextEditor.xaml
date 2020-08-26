@@ -3,7 +3,8 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:xt="http://schemas.xceed.com/wpf/xaml/toolkit"
 			 xmlns:asis="clr-namespace:WpfRichText" 
-			xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic" 
+			xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic"
+			xmlns:colorPicker="clr-namespace:WpfRichText.ColorPicker"
 			x:Class="WpfRichText.RichTextEditor" x:Name="uxRichTextEditor"
 			 >
 	<UserControl.Resources>
@@ -535,7 +536,7 @@
 			<Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
 				<Image Source="Images/text_underline.png"/>
 			</Button>
-			<xt:ColorPicker ShowDropDownButton="true" ToolTip="Select font color" ShowAvailableColors="False" SelectedColorChanged="FontColorPicker_SelectedColorChanged" Width="40" />
+			<colorPicker:ColorPicker ShowDropDownButton="true" ToolTip="Select font color" ShowAvailableColors="False" SelectedColorChanged="FontColorPicker_SelectedColorChanged" Width="40" />
 			<ComboBox Style="{DynamicResource formatComboBoxStyle}">
 				<ComboBoxItem IsSelected="True">
 					<Button Style="{StaticResource buttonComboBoxStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
